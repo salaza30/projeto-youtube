@@ -15,18 +15,18 @@ function App() {
   }, [tasks]);
 
   useEffect(() => {
-    const fetchTasks = async () => {
-      //CHAMAR API
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/todos?_limit=10",
-        { method: "GET" }
-      );
-      //PEGAR OS DADOS QUE ELA RETORNA
-      const data = await response.json();
-      //ARMAZENAR/PERSISTIR ESSES DADOS NO STATE
-      setTasks(data);
-    };
-    fetchTasks();
+    // const fetchTasks = async () => {
+    //   //CHAMAR API
+    //   const response = await fetch(
+    //     "https://jsonplaceholder.typicode.com/todos?_limit=10",
+    //     { method: "GET" }
+    //   );
+    //   //PEGAR OS DADOS QUE ELA RETORNA
+    //   const data = await response.json();
+    //   //ARMAZENAR/PERSISTIR ESSES DADOS NO STATE
+    //   setTasks(data);
+    // };
+    // fetchTasks();
   }, []);
 
   function onTaskClick(taskId) {
